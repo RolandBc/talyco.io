@@ -77,16 +77,16 @@
                 <div class="container">
                     <div class="hero-inner">
 						<div class="hero-copy">
-	                        <h1 class="hero-title mt-0">TALYCO</h1>
-	                        <p class="hero-paragraph">Optimiser votre stratégie et votre budget marketing avec Talyco</p>
-							<div class="hero-form field field-grouped">
+							<h1 class="hero-title mt-0">TALYCO</h1>
+							<p class="hero-paragraph">Optimiser votre stratégie et votre budget marketing avec Talyco</p>
+							<form id="contactForm" class="hero-form field field-grouped">
 								<div class="control control-expanded">
-									<input class="input" type="email" name="email" placeholder="Your best email&hellip;">
+									<input class="input" type="company" id="company" name="company" placeholder="Nom de votre entreprise&hellip;" required>
 								</div>
 								<div class="control">
-									<a class="button button-primary button-block" href="#">Early access</a>
+									<button type="submit" class="button button-primary button-block">Nous contacter</button>
 								</div>
-							</div>
+							</form>
 						</div>
 						<div class="hero-illustration">
 							<div class="hero-shape hero-shape-1">
@@ -474,10 +474,10 @@
                         </div>
                         <div class="footer-form newsletter-form field field-grouped">
                             <div class="control control-expanded">
-                                <input class="input" type="email" name="email" placeholder="Your best email&hellip;">
+                                <input class="input" type="company" name="company" placeholder="Nom de votre entreprise&hellip;">
                             </div>
                             <div class="control">
-                                <a class="button button-primary button-block button-shadow" href="#">Early access</a>
+                                <a class="button button-primary button-block button-shadow" href="#">Nous contacter</a>
                             </div>
                         </div>
                     </div>
@@ -564,5 +564,14 @@
     </div>
 
     <script src="dist/js/main.min.js"></script>
+	<script>
+		document.getElementById('contactForm').addEventListener('submit', function(event) {
+			event.preventDefault(); // Empêche la soumission standard du formulaire
+			var company = document.getElementById('company').value; // Récupère l'email saisi par l'utilisateur
+			var subject = "Demande de contact pour" + company; // Définissez le sujet de l'email
+			var emailBody = "Je suis intéressé par vos services. Veuillez me contacter."; // Définissez le corps de l'email
+			window.location = 'mailto:' + "henri@talyco.io" + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(emailBody);
+		});
+	</script>
 </body>
 </html>
