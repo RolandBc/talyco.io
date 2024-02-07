@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talyco - Coming Soon</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            background-color: #6c63ff;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .header h1 {
+            margin: 0;
+            text-transform: uppercase; /* Title in uppercase */
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+            padding-top: 60px; /* Adjusted padding for fixed header */
+            flex: 1; /* Flex grow to fill space */
+        }
+
+        .block {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #ddd;
+        }
+
+        .footer {
+            background-color: #6c63ff;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Talyco</h1>
+        <nav>
+            <a href="#block1">Block 1</a> |
+            <a href="#block2">Block 2</a> |
+            <a href="#block3">Block 3</a>
+        </nav>
+    </div>
+    <div class="content">
+        <div id="block1" class="block">
+            <h2>Block 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div id="block2" class="block">
+            <h2>Block 2</h2>
+            <p>Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.</p>
+        </div>
+        <div id="block3" class="block">
+            <h2>Block 3</h2>
+            <p>Donec placerat, orci vel aliquam faucibus, velit ex bibendum est, sed consectetur ipsum dolor sit amet, consectetur.</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Contact: 0622988577</p>
+        <p>Talyco team - Henri and Roland</p>
+    </div>
+</body>
+</html>
